@@ -1,0 +1,301 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    /*about*/
+    .about-img {
+        width: 100% !important;
+        height: 83% !important;
+        margin-top: 0.75rem !important;
+    }
+
+    /* vertical-line*/
+    .vl {
+        border-left: 1px solid #212529 !important;
+        height: 40px !important;
+    }
+
+    /* facts*/
+    .background-image {
+        background-image: linear-gradient(rgba(8, 8, 8, 0.5), rgb(37, 37, 37)),
+        url("{% static 'facts.jpg' %}");
+        height: 400px;
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .facts-text {
+        color: whitesmoke;
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: x-large;
+        text-align: center;
+        z-index: 500;
+    }
+
+    .facts-plus {
+        font-weight: bolder;
+        font-size: xx-large;
+    }
+
+    .facts-row {
+        position: relative;
+        margin-top: -250px !important;
+    }
+</style>
+
+<br>
+<br><br>
+<div class="container">
+    <div class="row d-sm-flex">
+        <div class="col-sm-8 col-lg-8">
+            <div class="jumbotron">
+                <small style="text-align: center;justify-content: center;color: red; margin-left: 220px; font-family: fantasy; font-weight: bolder;"  >Payment Only Upi Scanner ..</small>
+                <img  class="mx-5" src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2008/11/04/guardian_qrcode460x276.jpg?width=465&quality=85&dpr=1&s=none" alt="" style="width:500px; height:250px" class="img-thumbnail">
+
+                </p>
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <div class="jumbotron">
+
+                <div class="card">
+                    <div class="card-body">
+                        <form action="">
+                            <input type="number" class="name" required class="form-control"
+                                placeholder="25£  Donate Now">
+                            <button class="btn btn-warning">Donate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<div class="container mt-5">
+    <h4 class="text-center" style="font-family: loober;">Donation For</h4>
+    <h1 class="text-center" style="font-family: serif;">We believe that we can save more lifes with you</h1>
+    <div class="container ms-5 my-3 mb-5">
+        <div class="row justify-content-evenly">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-3"> <i class="fas fa-apple-alt fa-2x"></i></div>
+                    <div class="col-lg-6">
+                        <h5>Healthy Food</h5>
+                        <p style="font-family: cursive;">Some homeless shelters also accept donations of food from the
+                            public.. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-3"><i class="fas fa-hand-holding-water fa-3x"></i></div>
+
+                    <div class="col-lg-6">
+                        <h5>Pure Water</h5>
+                        <p style="font-family: cursive;">Giving clean water improves the health of families and
+                            children, keeps children in school. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-3"> <i class="fas fa-user-md fa-3x"></i></div>
+
+                    <div class="col-lg-6">
+                        <h5>Health Care </h5>
+                        <p style="font-family: cursive;">Health care or healthcare is the improvement of health via the
+                            prevention, diagnosis, treatment. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-evenly">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-3"> <i class="fas fa-user-graduate fa-3x"></i></div>
+
+                    <div class="col-lg-6">
+                        <h5>Education</h5>
+                        <p style="font-family: cursive;">Your donation could be as little as Rs 300 to Rs 6000 which
+                            will pay for education and training needs of students. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-3"><i class="fas fa-home fa-3x"></i></div>
+
+                    <div class="col-lg-6">
+                        <h5>Residence</h5>
+                        <p style="font-family: cursive;">Every city and town by ordinance may accept any money or
+                            property donated </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-3"><i class="fas fa-heartbeat fa-3x"></i></div>
+
+                    <div class="col-lg-6">
+                        <h5>Social Care</h5>
+                        <p style="font-family: cursive;">With Social Help Care, you can give hope and help to those in
+                            need. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<h4 class="text-center mb-3" style="font-family: loober;">NGO Homeless Help Still Now..</h4>
+<div class="container-fluid ms-0 me-0">
+    <div class="background-image"></div>
+    <div class="container facts-container">
+        <div class="row  justify-content-evenly facts-row">
+            <div class="col-lg-3 col-md-6">
+                <div class="facts-item">
+                    <i class="flaticon-home"></i>
+                    <div class="facts-text">
+                        <h3 class="facts-plus" data-toggle="counter-up">2 +</h3>
+                        <p style="font-family: loober;">Countries</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facts-item">
+                    <i class="flaticon-charity"></i>
+                    <div class="facts-text">
+                        <h3 class="facts-plus" data-toggle="counter-up">100 +</h3>
+                        <p style="font-family: loober;">Volunteers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facts-item">
+                    <i class="flaticon-kindness"></i>
+                    <div class="facts-text">
+                        <h3 class="facts-plus" data-toggle="counter-up">120 M &#8377;</h3>
+                        <p style="font-family: loober;">Our Goal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facts-item">
+                    <i class="flaticon-donation"></i>
+                    <div class="facts-text">
+                        <h3 class="facts-plus" data-toggle="counter-up">10 M &#8377;</h3>
+                        <p style="font-family: loober;">Raised</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid mt-5">
+    <div class="row bg-dark text-white">
+        <h3 class="text-center"> NGO HOMELESS</h3>
+        <div class="col-sm-3">
+            <ul>
+                <h4> KEEP IN TOUC </h4>
+                <a href="" class="text-white">
+                    <li> Latest News</li>
+                    <li> Facebook</li>
+                    <li> Twitter</li>
+                    <li> YouTube</li>
+                    <li> Instagram</li>
+                </a>
+
+
+
+
+
+
+            </ul>
+        </div>
+
+        <div class="col-sm-3">
+            <ul>
+                <h4> ABOUT US</h4>
+                <a href="" class="text-white">
+                    <li>Who we are</li>
+                    <li>Our Safeguarding Policy</li>
+                    <li>
+                        Accessibility</li>
+                    <li>Terms and conditions</li>
+                </a>
+
+
+
+
+
+
+            </ul>
+        </div>
+
+        <div class="col-sm-3">
+            <ul>
+                <h4> GET INVOLVED</h4>
+                <a class="text-white" href="">
+                    <li>Fundraising</li>
+                    <li>Volunteer</li>
+                    <li>Donate</li>
+                    <li>Jobs</li>
+                    <li>Sponsor a Room</li>
+
+                </a>
+
+
+
+
+
+
+            </ul>
+        </div>
+
+        <div class="col-sm-3">
+
+            <ul>
+                <h4>CONTACT US</h4>
+                <a href="" class="text-white">
+                    <li>Home</li>
+                    <li>Contact us</li>
+                    <li>
+                        FAQs T 000-000-001</li>
+                    <li>G-mail:- ngohomeless@gmail.com</li>
+                </a>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

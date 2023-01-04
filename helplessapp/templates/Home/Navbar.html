@@ -1,0 +1,49 @@
+{% load static %}
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-success  fixed-top">
+  <img style="width:200px;height:40px;box-shadow: 0px 0px 10px black;"   src="https://img.freepik.com/premium-vector/simple-red-line-charity-donation-homeless-logo-design_434503-933.jpg?w=2000" alt="">
+    <a class="navbar-brand mx-5 shadow-2-strong" href="{% url 'home' %}">NGO HOMELESS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+
+       
+        <li class="nav-item active">
+          <a class="nav-link text-dark text-white  shadow  mx-5" href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark shadow  text-white  mx-5" href="{% url 'about' %}">ABOUT</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link text-dark text-white  shadow   mx-5" href="{% url 'sponserroom' %}">SPONSER&nbsp;A&nbsp;ROOM</a>
+        </li>
+
+  
+        <li class="nav-item">
+          <a class="nav-link text-dark text-white shadow   mx-5 " href="{% url 'gallery' %}">Gallary</a>
+        </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark btn-warning rounded-2  shadow   mx-5"  href="{% url 'donate' %}">DONATE</a>
+          </li>
+  
+        
+  
+  
+        
+
+   
+      </ul>
+
+    
+    </div>
+  </nav>

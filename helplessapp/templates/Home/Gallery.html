@@ -1,0 +1,568 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .hovereffect {
+        width: 100%;
+        height: 100%;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        cursor: default;
+        background: #42b078;
+    }
+
+    .hovereffect .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        padding: 50px 20px;
+    }
+
+    .hovereffect img {
+        display: block;
+        position: relative;
+        max-width: none;
+        width: calc(100% + 20px);
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .hovereffect:hover img {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .hovereffect h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        overflow: hidden;
+        padding: 0.5em 0;
+        background-color: transparent;
+    }
+
+    .hovereffect h2:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        content: '';
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    .hovereffect:hover h2:after {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .hovereffect a,
+    .hovereffect p {
+        color: #FFF;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+
+    .hovereffect:hover a,
+    .hovereffect:hover p {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+
+    }
+
+    /* second hover row */
+
+    .hovereffect {
+        width: 100%;
+        height: 100%;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        cursor: default;
+    }
+
+    .hovereffect .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+        transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    }
+
+    .hovereffect img {
+        display: block;
+        position: relative;
+        -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+        transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    }
+
+    .hovereffect h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        background: rgba(0, 0, 0, 0.6);
+        -webkit-transform: translatey(-100px);
+        -ms-transform: translatey(-100px);
+        transform: translatey(-100px);
+        -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+        transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+        padding: 10px;
+    }
+
+    .hovereffect a.info {
+        text-decoration: none;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: transparent;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        margin: 50px 0 0;
+        padding: 7px 14px;
+    }
+
+    .hovereffect a.info:hover {
+        box-shadow: 0 0 5px #fff;
+    }
+
+    .hovereffect:hover img {
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    .hovereffect:hover .overlay {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+
+    .hovereffect:hover h2,
+    .hovereffect:hover a.info {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -ms-transform: translatey(0);
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+    }
+
+    .hovereffect:hover a.info {
+        -webkit-transition-delay: .2s;
+        transition-delay: .2s;
+    }
+    
+
+    .bg-teal {
+    background-color: teal;
+}
+
+.text-teal {
+    color: white;
+}
+
+.collapse .navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+.carousel-item img {
+    height: 500px;
+}
+
+button {
+    border-radius: 100%;
+    border: 60px solid black;
+    background-color: antiquewhite;
+}
+
+
+/* 3rd images */
+
+.bg-gray {
+    background: linear-gradient(20deg, gray, rgb(137, 243, 243));
+}
+
+.card-footer img {
+    height: 250px;
+    overflow: hidden;
+    width: 500px;
+}
+
+.img-thumbnail {
+    height: 200px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.row:hover {
+    pointer-events: visiblePainted;
+}
+</style>
+<br>
+<br><br>
+
+
+
+<section>
+    <div class="p-3 bg-white text-center">
+        <div class="container">
+            <h5 class="display-6 font-monospace  text-center text-white bg-dark">Photo <span class="mute">Gallery</span></h5>
+            <p class="lead font-Cursive"> Homeless Hungry  Will Accept Donation</p>
+            <div class="row mt-5  animate__animated animate__bounce">
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="https://i2-prod.cambridge-news.co.uk/news/cambridge-news/article22907530.ece/ALTERNATES/s615/1_JS141843470.jpg" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbfuT7tNqnJvPr0PbrCwHc3ZMGm8e7_tqpQ&usqp=CAU" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="https://www.irishtimes.com/resizer/LyBFFq_sbbwuVAg4uebQQTMcpTs=/1600x900/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/irishtimes/2URYTOR6MYBDWU5AVZEF5YKO24.jpg" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- second row  -->
+
+            <div class="row mt-5   animate__animated animate__animate__rotateOutDownLeft">
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/teamwork-in-homeless-shelter-royalty-free-image-1608327313.?crop=1.00xw:0.755xh;0,0.142xh&resize=1200:*" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="http://www.queenswayorthodontics.co.uk/about-us/blog/wp-content/uploads/2017/12/food-bank-photo.jpg" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="https://www.sussexexpress.co.uk/webimg/b25lY21zOmNiOTk5MjBmLTI2MDMtNDE1YS1iZjE4LTkyZWJhMjc0MmQwYjoxMDZjMzE4Yy0zNjU4LTQ5NTQtODJmOS00NDYyOTZiNTQxY2I=.jpg?width=640&quality=65&smart" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-5    animate__animated animate__zoomIn">
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="https://www.anguscountyworld.co.uk/wp-content/uploads/2022/01/Aldi-Christmas-Donations.jpg-1024x682.jpg" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="https://www.redcross.org.uk/-/media/feature/projectred/16x9/aaa-images-holding-folder/heroimages/uk-flooding.png?h=866&w=767&la=en&hash=7C896A1BFFDE2D294DD51817BED2B63B38A6374C" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img src="https://erepublic.brightspotcdn.com/dims4/default/86abc38/2147483647/strip/true/crop/960x467+0+19/resize/1440x700!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.amazonaws.com%2Fd5%2Fec%2F8028d40a4d758ad73c488efbc197%2F20201209-amx-us-news-legislator-onondaga-county-budget-fails-smg.jpg" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<br>
+<br>
+
+<div class="container mt-xl-n5">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive"
+                    src="https://media.hawzahnews.com/old/en/Media/Original/1395/09/28/IMG19595254.jpg"
+                    alt="">
+                <div class="overlay">
+                    <h2>Suport..</h2>
+                    <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive"
+                    src="https://static.independent.co.uk/2020/12/01/16/GettyImages-1214444919.jpg?width=1200"
+                    alt="">
+                <div class="overlay">
+                    <h2 class="text-white opacity-11">
+                        Freepik
+                        Helping people Vectors & Illustrations</h2>
+                    <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive"
+                    src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2020/05/29/16/rhythmsoflifeandrewfarisfelixproject29052020.jpg?width=968&auto=webp&quality=50&crop=968%3A645%2Csmart" alt="">
+                <div class="overlay">
+                    <h2>
+
+                        People Who Help Us</h2>
+                    <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive"
+                    src="https://media.bapscharities.org/2016/11/SufraHomeless_London_161015-6-1024x683.jpg"
+                    alt="">
+                <div class="overlay">
+                    <h2>
+
+                        In this pandemic, Duterte has his priorities all wrong</h2>
+                    <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive"
+                    src="https://i.guim.co.uk/img/media/5361ba663ebac8d63c15d19f2020f2076b537f86/0_99_6000_3600/500.jpg?quality=85&auto=format&fit=max&s=005992849cc9c42344a8ca18c72d5502"
+                    alt="">
+                <div class="overlay">
+                    <h2>
+
+                        Freepik
+                        Free Vector | Charity concept people or volunteer donate stuff to help other people idea of
+                        humanitarian support and philanthropy isolated vector</h2>
+                    <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive"
+                    src="https://justiceconnect.org.au/wp-content/uploads/2021/08/%C2%A9AnnaCarlile-4536-784x442.jpg"
+                    alt="">
+                <div class="overlay">
+                    <h2>
+
+                    </h2>
+                    <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive"
+                    src="https://londoncares.ca/wp-content/uploads/2022/08/LCF_Photography_020-Copy.jpg"
+                    alt="">
+                <div class="overlay">
+                    <h2>
+                    </h2>
+                    <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive"
+                    src="data:image/jpeg;base64,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" alt="">
+                <div class="overlay">
+                    <h2>
+
+
+                        The Amazing Power of Helping Others</h2>
+                    <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<br>
+<br>
+<div class="container mt-6">
+    <div class="row">
+        <div class="col-sm-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/11pMGxgNUJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               
+        </div>
+
+        <div class="col-sm-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8wk_U_ulBxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid">
+    <div class="row bg-dark text-white">
+        <h3 class="text-center"> NGO HOMELESS</h3>
+        <div class="col-sm-3">
+            <ul>
+                <h4> KEEP IN TOUC </h4>
+                <a href="" class="text-white">
+                    <li> Latest News</li>
+                    <li> Facebook</li>
+                    <li> Twitter</li>
+                    <li> YouTube</li>
+                    <li> Instagram</li>
+                </a>
+
+
+
+
+
+
+            </ul>
+        </div>
+
+        <div class="col-sm-3">
+            <ul>
+                <h4> ABOUT US</h4>
+                <a href="" class="text-white">
+                    <li>Who we are</li>
+                    <li>Our Safeguarding Policy</li>
+                    <li>
+                        Accessibility</li>
+                    <li>Terms and conditions</li>
+                </a>
+
+
+
+
+
+
+            </ul>
+        </div>
+
+        <div class="col-sm-3">
+            <ul>
+                <h4> GET INVOLVED</h4>
+                <a class="text-white" href="">
+                    <li>Fundraising</li>
+                    <li>Volunteer</li>
+                    <li>Donate</li>
+                    <li>Jobs</li>
+                    <li>Sponsor a Room</li>
+
+                </a>
+
+
+
+
+
+
+            </ul>
+        </div>
+
+        <div class="col-sm-3">
+
+            <ul>
+                <h4>CONTACT US</h4>
+                <a href="" class="text-white">
+                    <li>Home</li>
+                    <li>Contact us</li>
+                    <li>
+                        FAQs T 000-000-001</li>
+                    <li>G-mail:- ngohomeless@gmail.com</li>
+                </a>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

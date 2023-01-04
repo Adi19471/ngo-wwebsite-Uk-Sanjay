@@ -1,0 +1,446 @@
+
+
+{% extends 'Home/base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+
+
+
+
+<!-- Carousel wrapper -->
+<div id="carouselMaterialStyle" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-mdb-target="#carouselMaterialStyle" data-mdb-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-mdb-target="#carouselMaterialStyle" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-mdb-target="#carouselMaterialStyle" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner rounded-5 shadow-4-strong">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <img src="https://media.11alive.com/assets/WXIA/images/d987e3e1-4ab0-41b4-8a8f-68a23713652f/d987e3e1-4ab0-41b4-8a8f-68a23713652f_1140x641.jpeg" class="d-block " alt="Sunset Over the City"
+     
+        style="width:100%;height:500px" />
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="animate__animated animate__backInDown">Help the Helpless</h2>
+        <p>Two Countries, One Mission. Dedicated to improving the lives of extremely disabled and impoverished
+          children..</p>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item mt-">
+      <img src="https://metro.co.uk/wp-content/uploads/2021/12/PRC_214225424.jpg?quality=90&strip=all" class="d-block " alt="Canyon at Nigh" style="width:100%;height:500px" />
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="animate__animated animate__bounce animate__delay-2s">The Need</h2>
+        <p>Only 8% of disabled persons in UK  graduate with a degree. 19% of children in Ecuador suffer from
+          malnutrition due to poverty. Together, we can help these children overcome poverty and disability..</p>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item mt-2">
+      <img src="data:image/jpeg;base64,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" class="d-block mt-5" alt="Cliff Above a Stormy Sea"
+        style="width:100%;height:500px" />
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="animate__animated animate__backOutUp fa-4">Help the Helpless</h2>
+        <p>Help the Helpless does not sell or share donor information.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Inner -->
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMaterialStyle" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselMaterialStyle" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Carousel wrapper -->
+
+
+
+<!-- start code  -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <center>
+        <h2>- Homeless  NGO -</h2>
+        <p class="fa-2x"><strong>HelpAge UK</strong> is a leading charity platform in Uk  working with and for
+          disadvantaged elderly for more than 4 decades.</p>
+        <button class="btn bg-dark text-white-50">READ MORE</button>
+      </center>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="view overlay">
+        <h3>Making the Laws for the Rights...</h3>
+        <img style="width: 100%;height: 300px;border: 35px solid green "
+          src="https://www.wlm.org.uk/images/f0c16fe5-0dc4-465d-8073-25a34dc98511/cropped?width=600&height=600" class="img-fluid overlay"
+          alt="">
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <div class="col-sm-4">
+      <div class="view overlay">
+        <h3>Rights & Entitlements Programs...</h3>
+        <img style="width: 100%;height: 300px;border: 35px solid green "
+          src="https://www.wlm.org.uk/images/c6dac13d-6386-4825-875a-78f58edbf464/cropped?width=600&height=600" class="img-fluid overlay" alt="">
+        <div class="mask flex-center rgba-red-strong">
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="col-sm-4">
+      <div class="view overlay">
+        <h3>covid-19-emergency-response...</h3>
+        <img style="width: 100%;height: 300px;border: 35px solid green "
+          src="https://www.wlm.org.uk/images/35cfcede-80b0-450f-be3f-2609664f9791/cropped?width=600&height=600"
+          class="img-fluid overlay" alt="">
+        <div class="mask flex-center rgba-red-strong">
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <h3 class="text-center">WHAT WE DO</h3>
+        <hr>
+        <p class="text-center fa-2x px-5">From housing and health to learning and engagement, we aim to help vulnerable
+          young people move on from homelessness and build a future they can believe in.</p>
+        <center> <button class="btn btn-outline-info">Learn More</button></center>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="row row-cols-1 row-cols-md-3 g-5">
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://centrepoint.org.uk/media/4695/20210216-web-banner-dsc_7808.jpg?anchor=center&mode=crop&width=440&height=280&bgcolor=fff&rnd=132590888200000000"
+                class="card-img-top" alt="Hollywood Sign on The Hill" />
+              <div class="card-body">
+                <h5 class="card-title">WHAT IS YOUTH HOMELESSNESS?</h5>
+                <p class="card-text">
+                  We know homeless young people are sleeping rough on the streets every night - but there are thousands
+                  more you don't see.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://centrepoint.org.uk/media/2611/23783482_1932347170125305_1526397322672982385_o.jpg?center=0.275,0.465&mode=crop&width=440&height=280&bgcolor=fff&rnd=131734454150000000"
+                class="card-img-top" alt="Palm Springs Road" />
+              <div class="card-body">
+                <h5 class="card-title">OUR SUPPORT SERVICES</h5>
+                <p class="card-text">
+                  We provide accommodation, health support and life skills to get vulnerable young people back into
+                  education, training and employment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" class="card-img-top"
+                alt="Los Angeles Skyscrapers" />
+              <div class="card-body">
+                <h5 class="card-title">OUR IMPACT</h5>
+                <p class="card-text">Thanks to our supporters, we've been one of the most effective charities that help
+                  homeless young people for almost 50 years.t.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 3rd images home side -->
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="card mb-6" style="max-width: 100%;">
+          <div class="row g-1">
+            <div class="col-md-6">
+              <img src="https://cdn.pixabay.com/photo/2019/08/08/15/57/boy-4393262_1280.jpg"
+                alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <div class="card-body  text-cente">TAKE A LOOK AT OUR BLOG</div>
+                <p class="card-text">
+                  Our blog is a safe space where we discuss the things that really matter to us: young people, housing,
+                  government policy, our campaigns and our work. It's where we ask the difficult questions, demystify
+                  the jargon, discuss the policies that affect young people the most and give you a glimpse of our
+                  day-to-day as a youth homelessness charity.
+                </p>
+                <p class="card-text">
+                  <small class="btn btn-secondary">DONATE </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card-body">
+            <div class="card-body mt-5 px-5 text-center">NOT COMING HOME</div>
+            <p class="card-text mt-5 px-5">
+              Almost 30,000 young people are #NotComingHome this winter because they simply don’t have a home to go
+              to.
+
+              With nowhere else to turn, these vulnerable young people are being pushed to breaking point. Your
+              donation will show them they're not alone.
+            </p>
+            <p class="card-text">
+              <center><button class="btn btn-secondary">DONATE </button></center </p>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-6">
+          <div class="card mb-6" style="max-width: 100%;">
+            <img src="https://www.salvationarmy.org.uk/sites/default/files/styles/card/public/images/2020-01/Swindon%20Life%20House%20Andrew%20King%20190821%20124945a%20web_0.jpg?h=38502cbb&itok=jZMv7KPE"
+              alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+          </div>
+
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <h3 class="text-center fa-2x">
+          HOW WE HELP HOMELESS YOUNG PEOPLE
+        </h3>
+
+
+        <div class="col-sm-4 ">
+
+          <div class="" style="width: 23rem; ">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT37VlqYbmefgjoEZ3qaQfWvlit6FYyI5MK8MJYzphqks_04PMCTWCsG6ztcNOy0PoZywQ&usqp=CAU"
+              class="img-rounded shadow-lg" alt="...">
+
+            <p class="card-text">We operate <strong style="color: red;"> 60 services</strong> providing support to young
+              people across the UK.
+            </p>
+
+          </div>
+
+
+
+
+        </div>
+
+        <div class="col-sm-4 ">
+
+          <div class="" style="width: 23rem; ">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGKwRGP_1K8WmjcZlgZ9-cPkvR-BsmUKclQ&usqp=CAU"
+              class="img-rounded shadow-lg" alt="...">
+
+            <p class="card-text">We provide 900 bed's spaces for homeless young people.
+            </p>
+
+          </div>
+
+
+
+
+        </div>
+        <div class="col-sm-4 ">
+
+          <div class="" style="width: 23rem; ">
+            <img
+              src="https://media.istockphoto.com/id/183881669/photo/house.jpg?s=612x612&w=0&k=20&c=3fc8gr2HoLQwgIJnE568SpuDj4tgkQeMKumtCMnvPoA="
+              style="width: 300px;" class="img-rounded shadow-lg" alt="...">
+
+            <p class="card-text">50 per cent of young people move on from Centrepoint positively.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="container-fluid mt-5 ">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OUm2rBgTUQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              <div class="card-body">
+
+
+
+                <h5 class="card-title">Help someone turn their
+                  life around for goode</h5>
+                <p class="card-text">Donate directly to a homeless person or refugee. Follow their journey into a career
+                  and home with our award-winning support 🤝3
+                <br>
+                <p class="mt-3 ">It's up to us to choose. You may be feeling you're too old to make significant changes in your life. But it doesn't matter what age you are, you can always turn your life around. Even people in the final months and years of their lives and started in new directions.</p>
+                </p>
+                <a href="#!" class="btn btn-primary">Donate</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+
+      <div class="container-fluid">
+        <div class="row bg-dark text-white">
+            <h3 class="text-center"> NGO HOMELESS</h3>
+            <div class="col-sm-3">
+                <ul>
+                    <h4> KEEP IN TOUC </h4>
+                   <a href="" class="text-white">
+                    <li> Latest News</li>
+                    <li> Facebook</li>
+                    <li> Twitter</li>
+                    <li> YouTube</li>
+                    <li> Instagram</li>
+                   </a>
+    
+    
+    
+    
+    
+    
+                </ul>
+            </div>
+    
+            <div class="col-sm-3">
+                <ul>
+                    <h4> ABOUT US</h4>
+                   <a href="" class="text-white">
+                    <li>Who we are</li>
+                    <li>Our Safeguarding Policy</li>
+                    <li>
+                        Accessibility</li>
+                    <li>Terms and conditions</li>
+                   </a>
+    
+    
+    
+    
+    
+    
+                </ul>
+            </div>
+    
+            <div class="col-sm-3">
+                <ul>
+                    <h4> GET INVOLVED</h4>
+                    <a class="text-white" href="">
+                        <li>Fundraising</li>
+                        <li>Volunteer</li>
+                        <li>Donate</li>
+                        <li>Jobs</li>
+                        <li>Sponsor a Room</li>
+        
+                    </a>
+    
+    
+    
+    
+    
+    
+                </ul>
+            </div>
+    
+            <div class="col-sm-3">
+    
+                <ul>
+                    <h4>CONTACT US</h4>
+            <a href="" class="text-white">
+                <li>Home</li>
+                <li>Contact us</li>
+                <li>
+                    FAQs T 000-000-001</li>
+          <li>G-mail:- ngohomeless@gmail.com</li>
+            </a>
+    
+    
+    
+    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+      {% endblock content %}

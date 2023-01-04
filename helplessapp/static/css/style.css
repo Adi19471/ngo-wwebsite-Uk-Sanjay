@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+.overlay:hover{
+    border: 40px solid navy;
+
+}
+
+#curve{
+    border-radius: 0px 155px 0px 150px ;
+    border-color: darkgoldenrod;
+    box-shadow: 0px 0px  10px red;
+}
+
+.text-lg-center{
+    background-color: black;
+    color: white;
+}
+
+.bg-color-about{
+    background-color: rgb(245, 222, 222);
+}
